@@ -1,4 +1,3 @@
-import 'package:bloc_news/models/news_model.dart';
 import 'package:bloc_news/screens/detail_screen.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
@@ -11,7 +10,7 @@ class NewsCard extends StatelessWidget {
     required this.newsModels,
   }) : super(key: key);
 
-  final List<NewsModel> newsModels;
+  final List<dynamic> newsModels;
 
   @override
   Widget build(BuildContext context) {

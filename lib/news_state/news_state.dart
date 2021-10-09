@@ -13,7 +13,7 @@ class StateLoading extends NewsState {
 }
 
 class StateSuccess extends NewsState {
-  final List<NewsModel> response;
+  final List<dynamic> response;
   const StateSuccess(this.response);
 }
 

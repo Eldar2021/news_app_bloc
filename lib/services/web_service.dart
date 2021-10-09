@@ -16,7 +16,7 @@ class WebService {
     }
   }
 
-  Future<List<NewsModel>> getNews() async {
+  Future<List<dynamic>> getNews() async {
     final response = await dio.get(ServiceConstants.webUrl);
     if (response.statusCode == 200) {
       final dynamic result = response.data;
