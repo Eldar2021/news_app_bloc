@@ -41,6 +41,8 @@ dependencies:
   # Hive
   hive: ^2.0.4
   hive_flutter: ^1.1.0
+  # connectivity wifi or mobile internet
+  connectivity: ^3.0.6
   # web view
   # /// webview_flutter: ^2.0.10
 

@@ -8,25 +8,24 @@ class HiveService {
   }
 
   Future<void> addBoxes(List<dynamic> items, String boxName) async {
-    print("adding boxes");
     final openBox = await Hive.openBox(boxName);
-
     for (var item in items) {
       openBox.add(item);
     }
   }
 
-  Future<List<dynamic>>getBoxes(String boxName) async {
+  Future<List<dynamic>> getBoxes(String boxName) async {
     List<dynamic> boxList = <dynamic>[];
-
     final openBox = await Hive.openBox(boxName);
-
     int length = openBox.length;
-
     for (int i = 0; i < length; i++) {
       boxList.add(openBox.getAt(i));
     }
-
     return boxList;
+  }
+
+  Future<void> clearBoxes(String boxName) async {
+    final openBox = await Hive.openBox(boxName);
+    await openBox.clear();
   }
 }
